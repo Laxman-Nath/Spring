@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context/xsd">
+ 
+ <bean class="setter_injection.Employee" name="employee1">
+   <property name="Id">
+    <value>1</value>
+   </property>
+      <property name="Name">
+    <value>Laxman</value>
+   </property>
+      <property name="Address">
+    <value>MNR</value>
+   </property>
+ </bean>
+  <bean class="setter_injection.Employee" name="employee2">
+   <property name="Id" value="2"></property>
+    <property name="Name" value="Bikash"></property>
+      <property name="Address" value="MNR"></property>
+ </bean>
+ <bean class="setter_injection.Employee" name="employee3" p:Id="1" p:Name="Harish" p:Address="Belauri"></bean>
+ </beans>
